@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
 
                                       children: [
                                         Padding(
-                                          padding: const EdgeInsets.all(9.0),
+                                          padding: const EdgeInsets.all(8.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(20),

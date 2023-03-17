@@ -1,5 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:my_blog/constants/constans.dart';
 
 import 'package:my_blog/modal_bottom_sheet/forgot_password_bottom_sheet.dart';
 import 'package:my_blog/modal_bottom_sheet/sign_up_bottom_sheet.dart';
@@ -45,19 +46,19 @@ class SignInBottomSheet {
                         textAlignVertical: TextAlignVertical.top,
                         validator: (value) {
                           if (!EmailValidator.validate(value!)) {
-                            return "Lütfen geçerli bir email giriniz!";
+                            return Constants.emailWarningText;
                           }
 
                           return null;
                         },
-                        decoration: const InputDecoration(
-                          icon: Icon(Icons.person,
+                        decoration: InputDecoration(
+                          icon: const Icon(Icons.person,
                               color: Color.fromARGB(255, 210, 206, 206)),
-                          enabledBorder: UnderlineInputBorder(
+                          enabledBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white)),
-                          hintText: "Email",
-                          hintStyle:
-                              TextStyle(color: Colors.white, fontSize: 17),
+                          hintText: Constants.emailText,
+                          hintStyle: const TextStyle(
+                              color: Colors.white, fontSize: 17),
                         ),
                       ),
                       SizedBox(
@@ -69,20 +70,20 @@ class SignInBottomSheet {
                         textAlignVertical: TextAlignVertical.top,
                         validator: (value) {
                           if (password.text.isEmpty) {
-                            return "Lütfen geçerli bir şifre giriniz";
+                            return Constants.emailWarningText;
                           }
                           return null;
                         },
-                        decoration: const InputDecoration(
-                          icon: Icon(
+                        decoration: InputDecoration(
+                          icon: const Icon(
                             Icons.key,
                             color: Color.fromARGB(255, 210, 206, 206),
                           ),
-                          enabledBorder: UnderlineInputBorder(
+                          enabledBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white)),
-                          hintText: "Password",
-                          hintStyle:
-                              TextStyle(color: Colors.white, fontSize: 17),
+                          hintText: Constants.passText,
+                          hintStyle: const TextStyle(
+                              color: Colors.white, fontSize: 17),
                         ),
                       ),
                       Container(
@@ -94,9 +95,9 @@ class SignInBottomSheet {
                             ForgotPasswordBottomSheet()
                                 .showBottomSheetForgotPassword(context);
                           }),
-                          child: const Text(
-                            "Forgot password?",
-                            style: TextStyle(color: Colors.white),
+                          child: Text(
+                            Constants.forgotPassQuestionText,
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
@@ -123,17 +124,17 @@ class SignInBottomSheet {
                                 style: ElevatedButton.styleFrom(
                                     primary: const Color.fromARGB(
                                         255, 96, 222, 100)),
-                                child: const Text(
-                                  "Sign in",
-                                  style: TextStyle(fontSize: 18),
+                                child: Text(
+                                  Constants.signInText,
+                                  style: const TextStyle(fontSize: 18),
                                 )),
                           )),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text(
-                            "New user?",
-                            style: TextStyle(color: Colors.white),
+                          Text(
+                            Constants.newUserQuestionText,
+                            style: const TextStyle(color: Colors.white),
                           ),
                           TextButton(
                               onPressed: (() {
@@ -141,9 +142,9 @@ class SignInBottomSheet {
                                 SignUpBottomSheet()
                                     .showBottomSheetSignUp(context);
                               }),
-                              child: const Text(
-                                "Sign up",
-                                style: TextStyle(color: Colors.green),
+                              child: Text(
+                                Constants.signUpText,
+                                style: const TextStyle(color: Colors.green),
                               ))
                         ],
                       )

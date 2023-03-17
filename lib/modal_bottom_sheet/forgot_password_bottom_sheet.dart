@@ -1,7 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_blog/modal_bottom_sheet/sign_in_bottom_sheet.dart';
+import 'package:my_blog/constants/constans.dart';
 import 'package:my_blog/screens/login_screen.dart';
 
 class ForgotPasswordBottomSheet {
@@ -42,18 +42,18 @@ class ForgotPasswordBottomSheet {
                           textAlignVertical: TextAlignVertical.top,
                           validator: (value) {
                             if (!EmailValidator.validate(value!)) {
-                              return "Geçerli bir email giriniz!";
+                              return Constants.emailWarningText;
                             }
                             return null;
                           },
-                          decoration: const InputDecoration(
-                            icon: Icon(Icons.person,
+                          decoration: InputDecoration(
+                            icon: const Icon(Icons.person,
                                 color: Color.fromARGB(255, 210, 206, 206)),
-                            enabledBorder: UnderlineInputBorder(
+                            enabledBorder: const UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white)),
-                            hintText: "Email",
-                            hintStyle:
-                                TextStyle(color: Colors.white, fontSize: 17),
+                            hintText: Constants.emailText,
+                            hintStyle: const TextStyle(
+                                color: Colors.white, fontSize: 17),
                           ),
                         ),
                         SizedBox(
@@ -65,20 +65,20 @@ class ForgotPasswordBottomSheet {
                           textAlignVertical: TextAlignVertical.top,
                           validator: (value) {
                             if (password.text.isEmpty) {
-                              return "Lütfen geçerli bir şifre giriniz!";
+                              return Constants.passWarningText;
                             }
                             return null;
                           },
-                          decoration: const InputDecoration(
-                            icon: Icon(
+                          decoration: InputDecoration(
+                            icon: const Icon(
                               Icons.key,
                               color: Color.fromARGB(255, 210, 206, 206),
                             ),
-                            enabledBorder: UnderlineInputBorder(
+                            enabledBorder: const UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white)),
-                            hintText: "Password",
-                            hintStyle:
-                                TextStyle(color: Colors.white, fontSize: 17),
+                            hintText: Constants.passText,
+                            hintStyle: const TextStyle(
+                                color: Colors.white, fontSize: 17),
                           ),
                         ),
                         SizedBox(
@@ -90,22 +90,22 @@ class ForgotPasswordBottomSheet {
                           textAlignVertical: TextAlignVertical.top,
                           validator: (value) {
                             if (rePassword.text.isEmpty) {
-                              return "Lütfen yeni şifrenizi tekrar girin!";
+                              return Constants.rePassWarningText;
                             } else if (value != password.text) {
-                              return "Yeni şifreniz hatalı!";
+                              return Constants.rePassIncorrectText;
                             }
                             return null;
                           },
-                          decoration: const InputDecoration(
-                            icon: Icon(
+                          decoration: InputDecoration(
+                            icon: const Icon(
                               Icons.lock,
                               color: Color.fromARGB(255, 210, 206, 206),
                             ),
-                            enabledBorder: UnderlineInputBorder(
+                            enabledBorder: const UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white)),
-                            hintText: "Re-enter Password",
-                            hintStyle:
-                                TextStyle(color: Colors.white, fontSize: 17),
+                            hintText: Constants.rePassText,
+                            hintStyle: const TextStyle(
+                                color: Colors.white, fontSize: 17),
                           ),
                         ),
                         Container(
@@ -125,9 +125,9 @@ class ForgotPasswordBottomSheet {
                                   style: ElevatedButton.styleFrom(
                                       primary: const Color.fromARGB(
                                           255, 96, 222, 100)),
-                                  child: const Text(
-                                    "Change Password",
-                                    style: TextStyle(fontSize: 18),
+                                  child: Text(
+                                    Constants.changePassText,
+                                    style: const TextStyle(fontSize: 18),
                                   )),
                             )),
                       ]),

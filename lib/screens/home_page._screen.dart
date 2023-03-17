@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:my_blog/screens/nav_bar.dart';
-import 'package:my_blog/screens/post_detail_screen.dart';
 import 'package:my_blog/screens/top_bar.dart';
 import 'package:my_blog/widgets/home_page_post_container_widget.dart';
 import 'package:my_blog/widgets/horizontal_post_container_widget.dart';
@@ -102,12 +99,12 @@ class _HomePageState extends State<HomePage> {
                           Column(
                             children: [
                               HorizontalPostContainer(
-                                image: AssetImage("assets/deneme.jpg"),
+                                image: const AssetImage("assets/deneme.jpg"),
                                 user: "wef",
                                 text: 'Why personal finances are killing you',
                               ),
                               HorizontalPostContainer(
-                                  image: AssetImage("assets/foto.jpeg"),
+                                  image: const AssetImage("assets/foto.jpeg"),
                                   text: "deneme",
                                   user: "Fatih")
                             ],

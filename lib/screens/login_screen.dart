@@ -1,10 +1,12 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:my_blog/constants/constans.dart';
 import 'package:my_blog/modal_bottom_sheet/sign_in_bottom_sheet.dart';
 
 bool isloadling = false;
 bool closelogin = false;
+// ignore: unused_element
 Timer _timer = Timer(const Duration(milliseconds: 400), () {});
 
 class LoginScreen extends StatefulWidget {
@@ -15,7 +17,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _MyLoginScreenState extends State<LoginScreen> {
- 
   bool obscureText = true;
 
   @override
@@ -69,10 +70,12 @@ class _MyLoginScreenState extends State<LoginScreen> {
                                   textStyle: const TextStyle(fontSize: 20),
                                 ),
                                 onPressed: () {
-                                  SignInBottomSheet().showBottomSheetSignIn(context);
-                              },
-                                child: const Text('Sign',
-                                    style: TextStyle(color: Colors.white)),
+                                  SignInBottomSheet()
+                                      .showBottomSheetSignIn(context);
+                                },
+                                child: Text(Constants.signText,
+                                    style:
+                                        const TextStyle(color: Colors.white)),
                               ),
                             ),
                           ],
@@ -140,8 +143,9 @@ class _MyLoginScreenState extends State<LoginScreen> {
                                     },
                                   );
                                 },
-                                child: const Text('Sign in Facebook',
-                                    style: TextStyle(color: Colors.white)),
+                                child: Text(Constants.signInFacebookText,
+                                    style:
+                                        const TextStyle(color: Colors.white)),
                               ),
                             ),
                           ],
@@ -163,8 +167,8 @@ class _MyLoginScreenState extends State<LoginScreen> {
               backgroundColor: Colors.grey.withOpacity(0.7),
               content: SizedBox(
                 height: size.height * 0.02,
-                child: const Center(
-                  child: Text('Çıkmak için tekrar basınız.'),
+                child: Center(
+                  child: Text(Constants.pressToExitText),
                 ),
               )));
           return Future.value(false);

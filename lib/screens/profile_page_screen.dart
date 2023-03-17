@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:my_blog/constants/constans.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -48,65 +49,69 @@ class _ProfilePageState extends State<ProfilePage> {
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: TextFormField(
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.email),
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.email),
                       prefixIconColor: Color.fromARGB(255, 210, 206, 206),
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
-                      enabledBorder: UnderlineInputBorder(
+                      enabledBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey)),
-                      hintText: "E-mail",
-                      hintStyle: TextStyle(color: Colors.grey, fontSize: 17),
+                      hintText: Constants.emailText,
+                      hintStyle:
+                          const TextStyle(color: Colors.grey, fontSize: 17),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: TextFormField(
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.phone),
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.phone),
                       prefixIconColor: Color.fromARGB(255, 210, 206, 206),
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
-                      enabledBorder: UnderlineInputBorder(
+                      enabledBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey)),
-                      hintText: "Phone number",
-                      hintStyle: TextStyle(color: Colors.grey, fontSize: 17),
+                      hintText: Constants.phoneNumText,
+                      hintStyle:
+                          const TextStyle(color: Colors.grey, fontSize: 17),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: TextFormField(
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.verified_user_rounded),
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.verified_user_rounded),
                       prefixIconColor: Color.fromARGB(255, 210, 206, 206),
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
-                      enabledBorder: UnderlineInputBorder(
+                      enabledBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey)),
-                      hintText: "Verification Code",
-                      hintStyle: TextStyle(color: Colors.grey, fontSize: 17),
+                      hintText: Constants.verificationCodeText,
+                      hintStyle:
+                          const TextStyle(color: Colors.grey, fontSize: 17),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: TextFormField(
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.key),
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.key),
                       prefixIconColor: Color.fromARGB(255, 210, 206, 206),
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
-                      enabledBorder: UnderlineInputBorder(
+                      enabledBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey)),
-                      hintText: "Password",
-                      hintStyle: TextStyle(color: Colors.grey, fontSize: 17),
+                      hintText: Constants.passText,
+                      hintStyle:
+                          const TextStyle(color: Colors.grey, fontSize: 17),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Container(
                       margin: const EdgeInsets.symmetric(vertical: 35),
                       width: size.width * 0.7,
@@ -120,9 +125,9 @@ class _ProfilePageState extends State<ProfilePage> {
                             style: ElevatedButton.styleFrom(
                                 primary:
                                     const Color.fromARGB(255, 96, 222, 100)),
-                            child: const Text(
-                              "Save Changes ",
-                              style: TextStyle(fontSize: 18),
+                            child: Text(
+                              Constants.saveChangesText,
+                              style: const TextStyle(fontSize: 18),
                             )),
                       )),
                 )

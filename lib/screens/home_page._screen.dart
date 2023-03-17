@@ -5,6 +5,7 @@ import 'package:my_blog/screens/nav_bar.dart';
 import 'package:my_blog/screens/post_detail_screen.dart';
 import 'package:my_blog/screens/top_bar.dart';
 import 'package:my_blog/widgets/home_page_post_container_widget.dart';
+import 'package:my_blog/widgets/horizontal_post_container_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -92,115 +93,24 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Container(
-                        height: size.height * 0.5, //height of TabBarView
+                        height: size.height * 0.84, //height of TabBarView
                         decoration: const BoxDecoration(
                             border: Border(
                                 top: BorderSide(
                                     color: Colors.grey, width: 0.5))),
                         child: TabBarView(children: <Widget>[
-                          Container(
-                            child: GestureDetector(
-                              onTap: (() {
-                                Get.to(const PostDetailScreen());
-                              }),
-                              child: Column(
-                                children: [
-                                  Container(
-                                    height: size.height * 0.16,
-                                    width: size.width * 0.9,
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 20.0),
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius:
-                                            BorderRadius.circular(25.0),
-                                        boxShadow: [
-                                          BoxShadow(
-                                              color:
-                                                  Colors.grey.withOpacity(0.4),
-                                              spreadRadius: 2,
-                                              blurRadius: 10,
-                                              blurStyle: BlurStyle.outer,
-                                              offset: Offset(0, 3)),
-                                        ]),
-                                    child: Row(
-
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            child: Image.asset(
-                                              "assets/deneme.jpg",
-                                              height: size.height * 0.14,
-                                              width: size.width * 0.3,
-                                              fit: BoxFit.fill,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              Container(
-                                                width: size.width * 0.5,
-                                                child: Text(
-                                                  "Why personal finances are killing you",
-                                                  textAlign: TextAlign.center,
-                                                  overflow:
-                                                      TextOverflow.visible,
-                                                ),
-                                              ),
-                                              Row(
-                                                children: const [
-                                                  Icon(Icons.person),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Text(
-                                                    "Aslıhan",
-                                                    style: TextStyle(
-                                                        color: Colors.grey),
-                                                  ),
-                                                  SizedBox(
-                                                    width: 15,
-                                                  ),
-                                                  Icon(
-                                                    Icons.access_time,
-                                                    color: Colors.grey,
-                                                  ),
-                                                  SizedBox(
-                                                    width: 5,
-                                                  ),
-                                                  Text("5 min",
-                                                      style: TextStyle(
-                                                          color: Colors.grey))
-                                                ],
-                                              )
-                                            ],
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    height: size.height * 0.18,
-                                    width: size.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(50.0),
-                                        boxShadow: [
-                                          BoxShadow(
-                                              color: Colors.black,
-                                              spreadRadius: 2),
-                                        ]),
-                                  ),
-                                ],
+                          Column(
+                            children: [
+                              HorizontalPostContainer(
+                                image: AssetImage("assets/deneme.jpg"),
+                                user: "wef",
+                                text: 'Why personal finances are killing you',
                               ),
-                            ),
+                              HorizontalPostContainer(
+                                  image: AssetImage("assets/foto.jpeg"),
+                                  text: "deneme",
+                                  user: "Fatih")
+                            ],
                           ),
                           Container(
                             child: Text('Display Tab 2',

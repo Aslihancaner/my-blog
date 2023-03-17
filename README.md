@@ -1,16 +1,16 @@
-# my_blog
+# 💻 my-blog
 
-A new Flutter project.
+  📝 My Blog, blog sayfası olarak tasarlanmış bir mobil uygulamadır. Bu mobil uygulama yazılırken front-endde Flutter kullanılmıştır. 
+Uygulamayı kendi cihazınızda ayağa kaldırabilmek için;
 
-## Getting Started
+◾ Öncelikle bir geliştirme ortamı kurmanız gerekmektedir.(Tercihen Vs Code)
 
-This project is a starting point for a Flutter application.
+◾Daha sonra projeyi githubdan çekmelisiniz. Nasıl yapılacağını bilmiyorsanız [buradan ](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) yardım alabilirsiniz.
 
-A few resources to get you started if this is your first Flutter project:
+◾ Emülatör olarak Android Studio emülatörü kullanılabilir. Gerekli kurulumları https://developer.android.com/studio/run/emulator sitesinden yapabilirsiniz. Kurulum bittikten sonra Vs Code arayüzünde sağ alt kısımda bulunan "No Device" seçeneğine tıklanılıp çıkan ekrandan istenilen cihaz seçilebilir.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+◾ Gerekli kurulumlar tamamlandıktan sonra terminali açın ve projenin ana dizinine gidip "flutter pub get" komutunu çalıştırın. Sonrasında F5 veya Run-> Start Debugging seçilerek projeyi çalıştırabilirsiniz.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  👥 Katkıda Bulunanlar:
+  Projenin fikrinden geliştirilmesine, her aşamasında desteğini esirgemeyen değerli arkadaşım Fatih Mehmet DEVECİ'ye katkılarından dolayı teşekkür ederim.
+

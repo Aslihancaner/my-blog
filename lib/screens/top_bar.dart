@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
+  final bool isSearchButton;
+  const TopBar({Key? key, this.isSearchButton = true}) : super(key: key);
+
   @override
   // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -26,14 +29,17 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
       //   textAlign: TextAlign.center,
       // ),
       actions: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.search,
-                color: Colors.black,
-              )),
+        Visibility(
+          visible: isSearchButton,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.black,
+                )),
+          ),
         ),
         const Padding(
           padding: EdgeInsets.all(8.0),

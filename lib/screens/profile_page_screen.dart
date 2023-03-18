@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:my_blog/constants/constans.dart';
+import 'package:my_blog/screens/nav_bar.dart';
+import 'package:my_blog/screens/top_bar.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -25,6 +27,8 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar:  const TopBar(isSearchButton: false),
+      drawer: NavBar(),
       body: Container(
         color: Colors.white,
         child: Padding(
@@ -36,7 +40,7 @@ class _ProfilePageState extends State<ProfilePage> {
               padding: const EdgeInsets.all(25.0),
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(top: 80, right: 80, left: 80),
+                  padding: EdgeInsets.only(top: 50, right: 80, left: 80),
                   child: CircleAvatar(
                     backgroundImage:
                         AssetImage("assets/person-images/asli_vesikalik.PNG"),
@@ -83,7 +87,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.verified_user_rounded),
-                      prefixIconColor: Color.fromARGB(255, 210, 206, 206),
+                      prefixIconColor: const Color.fromARGB(255, 210, 206, 206),
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
                       enabledBorder: const UnderlineInputBorder(
@@ -99,7 +103,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.key),
-                      prefixIconColor: Color.fromARGB(255, 210, 206, 206),
+                      prefixIconColor: const Color.fromARGB(255, 210, 206, 206),
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
                       enabledBorder: const UnderlineInputBorder(

@@ -65,6 +65,8 @@ class SignInBottomSheet {
                           height: MediaQuery.of(context).size.height * 0.03),
                       TextFormField(
                         controller: password,
+                        obscureText: true,
+                        obscuringCharacter: "*",
                         style: const TextStyle(color: Colors.white),
                         cursorColor: Colors.white,
                         textAlignVertical: TextAlignVertical.top,

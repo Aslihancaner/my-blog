@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: TopBar(),
+      appBar: const TopBar(),
       drawer: NavBar(),
       body: ListView(
         children: [

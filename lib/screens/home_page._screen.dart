@@ -67,13 +67,14 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           DefaultTabController(
+              
               length: 7, // length of tabs
               initialIndex: 0,
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     Container(
-                      child: const TabBar(
+                      child: const TabBar(                     
                         indicatorColor: Colors.transparent,
                         isScrollable: true,
                         labelColor: Colors.black,
@@ -91,10 +92,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Container(
                         height: size.height * 0.84, //height of TabBarView
-                        decoration: const BoxDecoration(
-                            border: Border(
-                                top: BorderSide(
-                                    color: Colors.grey, width: 0.5))),
+                        // decoration: const BoxDecoration(
+                        //     border: Border(
+                        //         top: BorderSide(
+                        //             color: Colors.grey, width: 0.5))),
                         child: TabBarView(children: <Widget>[
                           Column(
                             children: [

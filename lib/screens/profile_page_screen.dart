@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:my_blog/constants/constans.dart';
+import 'package:my_blog/constants/text_constants.dart';
 import 'package:my_blog/screens/nav_bar.dart';
 import 'package:my_blog/screens/top_bar.dart';
 
@@ -86,13 +86,13 @@ class _ProfilePageState extends State<ProfilePage> {
                   padding: const EdgeInsets.all(16.0),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.verified_user_rounded),
+                      prefixIcon: const Icon(Icons.key),
                       prefixIconColor: const Color.fromARGB(255, 210, 206, 206),
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
                       enabledBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey)),
-                      hintText: Constants.verificationCodeText,
+                      hintText: Constants.newPassText,
                       hintStyle:
                           const TextStyle(color: Colors.grey, fontSize: 17),
                     ),
@@ -108,7 +108,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       //     color: Color.fromARGB(255, 210, 206, 206)),
                       enabledBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey)),
-                      hintText: Constants.passText,
+                      hintText: Constants.rePassText,
                       hintStyle:
                           const TextStyle(color: Colors.grey, fontSize: 17),
                     ),

@@ -5,6 +5,7 @@ class Constants {
   static String signInFacebookText = "Sign in Facebook";
   static String emailText = "email";
   static String passText = "password";
+  static String newPassText="New Password";
   static String userNameText = "User name";
   static String phoneNumText = "Phone number";
   static String rePassText = "Re-enter Password";
@@ -29,5 +30,7 @@ class Constants {
   static String darkModeText = "Dark Mode";
   static String notificationsText = "Notifications";
   static String verificationCodeText = "Verification Code";
+  
+  
   static String saveChangesText = "Save Changes";
 }

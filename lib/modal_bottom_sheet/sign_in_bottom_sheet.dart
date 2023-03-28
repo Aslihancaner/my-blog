@@ -1,6 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
-import 'package:my_blog/constants/constans.dart';
+import 'package:my_blog/constants/text_constants.dart';
 
 import 'package:my_blog/modal_bottom_sheet/forgot_password_bottom_sheet.dart';
 import 'package:my_blog/modal_bottom_sheet/sign_up_bottom_sheet.dart';

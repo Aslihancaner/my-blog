@@ -1,7 +1,8 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_blog/constants/constans.dart';
+import 'package:my_blog/constants/color_constants.dart';
+import 'package:my_blog/constants/text_constants.dart';
 import 'package:my_blog/screens/login_screen.dart';
 
 class ForgotPasswordBottomSheet {
@@ -13,7 +14,7 @@ class ForgotPasswordBottomSheet {
     TextEditingController rePassword = TextEditingController();
     showModalBottomSheet(
         context: context,
-        backgroundColor: const Color.fromARGB(255, 69, 69, 69),
+        backgroundColor: ColorConstants.bottomSheetBackgroundColor,
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -37,8 +38,8 @@ class ForgotPasswordBottomSheet {
                       children: <Widget>[
                         TextFormField(
                           controller: email,
-                          style: const TextStyle(color: Colors.white),
-                          cursorColor: Colors.white,
+                          style: TextStyle(color: ColorConstants.white),
+                          cursorColor: ColorConstants.white,
                           textAlignVertical: TextAlignVertical.top,
                           validator: (value) {
                             if (!EmailValidator.validate(value!)) {

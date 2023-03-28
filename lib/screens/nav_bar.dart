@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:my_blog/constants/constans.dart';
+import 'package:my_blog/constants/text_constants.dart';
 import 'package:my_blog/screens/login_screen.dart';
 import 'package:my_blog/screens/profile_page_screen.dart';
 

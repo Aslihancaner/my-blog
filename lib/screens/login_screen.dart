@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:my_blog/constants/constans.dart';
+import 'package:my_blog/constants/text_constants.dart';
 import 'package:my_blog/modal_bottom_sheet/sign_in_bottom_sheet.dart';
 
 bool isloadling = false;

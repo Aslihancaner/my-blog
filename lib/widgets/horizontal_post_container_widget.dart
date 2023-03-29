@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_blog/screens/post_detail_screen.dart';
 
+import '../constants/color_constants.dart';
+
 class HorizontalPostContainer extends StatelessWidget {
   HorizontalPostContainer({
     Key? key,
@@ -25,11 +27,11 @@ class HorizontalPostContainer extends StatelessWidget {
         width: size.width * 0.9,
         margin: const EdgeInsets.symmetric(vertical: 20.0),
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: ColorConstants.white,
             borderRadius: BorderRadius.circular(25.0),
             boxShadow: [
               BoxShadow(
-                  color: Colors.grey.withOpacity(0.4),
+                  color: ColorConstants.grey.withOpacity(0.4),
                   spreadRadius: 2,
                   blurRadius: 10,
                   blurStyle: BlurStyle.outer,
@@ -71,7 +73,7 @@ class HorizontalPostContainer extends StatelessWidget {
                       ),
                       Text(
                         user,
-                        style: const TextStyle(color: Colors.grey),
+                        style: TextStyle(color: ColorConstants.grey),
                       ),
                       const SizedBox(
                         width: 15,
@@ -85,7 +87,7 @@ class HorizontalPostContainer extends StatelessWidget {
                       ),
                       Text(
                         '${time!.difference(DateTime.now()).inMinutes.abs()} min',
-                        style: const TextStyle(color: Colors.grey),
+                        style: TextStyle(color: ColorConstants.grey),
                       )
                     ],
                   )

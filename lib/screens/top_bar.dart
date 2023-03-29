@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/color_constants.dart';
+
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   final bool isSearchButton;
   const TopBar({Key? key, this.isSearchButton = true}) : super(key: key);
@@ -21,8 +23,8 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
           },
         );
       }),
-      backgroundColor: Colors.white,
-      shadowColor: Colors.transparent,
+      backgroundColor: ColorConstants.white,
+      shadowColor: ColorConstants.transparent,
       // title: const Text(
       //   "MyBlog",
       //   style: TextStyle(color: Colors.black),
@@ -35,9 +37,9 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
             padding: const EdgeInsets.all(8.0),
             child: IconButton(
                 onPressed: () {},
-                icon: const Icon(
+                icon: Icon(
                   Icons.search,
-                  color: Colors.black,
+                  color: ColorConstants.black,
                 )),
           ),
         ),

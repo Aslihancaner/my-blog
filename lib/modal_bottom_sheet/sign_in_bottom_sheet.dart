@@ -1,5 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:my_blog/constants/color_constants.dart';
 import 'package:my_blog/constants/text_constants.dart';
 
 import 'package:my_blog/modal_bottom_sheet/forgot_password_bottom_sheet.dart';
@@ -17,7 +18,7 @@ class SignInBottomSheet {
     showModalBottomSheet(
         isScrollControlled: true,
         context: context,
-        backgroundColor: const Color.fromARGB(255, 69, 69, 69),
+        backgroundColor: ColorConstants.bottomSheetBackgroundColor,
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -41,8 +42,8 @@ class SignInBottomSheet {
                     children: <Widget>[
                       TextFormField(
                         controller: email,
-                        style: const TextStyle(color: Colors.white),
-                        cursorColor: Colors.white,
+                        style:  TextStyle(color: ColorConstants.white),
+                        cursorColor: ColorConstants.white,
                         textAlignVertical: TextAlignVertical.top,
                         validator: (value) {
                           if (!EmailValidator.validate(value!)) {
@@ -52,13 +53,13 @@ class SignInBottomSheet {
                           return null;
                         },
                         decoration: InputDecoration(
-                          icon: const Icon(Icons.person,
-                              color: Color.fromARGB(255, 210, 206, 206)),
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
+                          icon:  Icon(Icons.person,
+                              color: ColorConstants.iconColor),
+                          enabledBorder:  UnderlineInputBorder(
+                              borderSide: BorderSide(color: ColorConstants.white)),
                           hintText: Constants.emailText,
-                          hintStyle: const TextStyle(
-                              color: Colors.white, fontSize: 17),
+                          hintStyle:  TextStyle(
+                              color: ColorConstants.white, fontSize: 17),
                         ),
                       ),
                       SizedBox(
@@ -67,8 +68,8 @@ class SignInBottomSheet {
                         controller: password,
                         obscureText: true,
                         obscuringCharacter: "*",
-                        style: const TextStyle(color: Colors.white),
-                        cursorColor: Colors.white,
+                        style:  TextStyle(color: ColorConstants.white),
+                        cursorColor: ColorConstants.white,
                         textAlignVertical: TextAlignVertical.top,
                         validator: (value) {
                           if (password.text.isEmpty) {
@@ -77,15 +78,15 @@ class SignInBottomSheet {
                           return null;
                         },
                         decoration: InputDecoration(
-                          icon: const Icon(
+                          icon:  Icon(
                             Icons.key,
-                            color: Color.fromARGB(255, 210, 206, 206),
+                            color: ColorConstants.iconColor,
                           ),
-                          enabledBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white)),
+                          enabledBorder:  UnderlineInputBorder(
+                              borderSide: BorderSide(color: ColorConstants.white)),
                           hintText: Constants.passText,
-                          hintStyle: const TextStyle(
-                              color: Colors.white, fontSize: 17),
+                          hintStyle:  TextStyle(
+                              color: ColorConstants.white, fontSize: 17),
                         ),
                       ),
                       Container(
@@ -99,7 +100,7 @@ class SignInBottomSheet {
                           }),
                           child: Text(
                             Constants.forgotPassQuestionText,
-                            style: const TextStyle(color: Colors.white),
+                            style:  TextStyle(color: ColorConstants.white),
                           ),
                         ),
                       ),
@@ -124,8 +125,7 @@ class SignInBottomSheet {
                                   return;
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    primary: const Color.fromARGB(
-                                        255, 96, 222, 100)),
+                                    primary: ColorConstants.saveChangesButtonColor),
                                 child: Text(
                                   Constants.signInText,
                                   style: const TextStyle(fontSize: 18),
@@ -136,7 +136,7 @@ class SignInBottomSheet {
                         children: [
                           Text(
                             Constants.newUserQuestionText,
-                            style: const TextStyle(color: Colors.white),
+                            style:  TextStyle(color: ColorConstants.white),
                           ),
                           TextButton(
                               onPressed: (() {
@@ -146,7 +146,7 @@ class SignInBottomSheet {
                               }),
                               child: Text(
                                 Constants.signUpText,
-                                style: const TextStyle(color: Colors.green),
+                                style:  TextStyle(color: ColorConstants.green),
                               ))
                         ],
                       )

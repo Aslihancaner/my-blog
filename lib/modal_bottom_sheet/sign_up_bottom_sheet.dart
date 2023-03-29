@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_blog/constants/text_constants.dart';
 
+import '../constants/color_constants.dart';
+
 class SignUpBottomSheet {
   void showBottomSheetSignUp(BuildContext context) {
     final GlobalKey<FormState> formKey2 = GlobalKey<FormState>();
@@ -15,7 +17,7 @@ class SignUpBottomSheet {
         useRootNavigator: true,
         isDismissible: false,
         context: context,
-        backgroundColor: const Color.fromARGB(255, 69, 69, 69),
+        backgroundColor: ColorConstants.bottomSheetBackgroundColor,
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -40,8 +42,8 @@ class SignUpBottomSheet {
                         children: <Widget>[
                           TextFormField(
                             controller: email,
-                            style: const TextStyle(color: Colors.white),
-                            cursorColor: Colors.white,
+                            style: TextStyle(color: ColorConstants.white),
+                            cursorColor: ColorConstants.white,
                             textAlignVertical: TextAlignVertical.top,
                             validator: (value) {
                               if (!EmailValidator.validate(value!)) {
@@ -50,19 +52,20 @@ class SignUpBottomSheet {
                               return null;
                             },
                             decoration: InputDecoration(
-                              icon: const Icon(Icons.email,
-                                  color: Color.fromARGB(255, 210, 206, 206)),
-                              enabledBorder: const UnderlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white)),
+                              icon: Icon(Icons.email,
+                                  color: ColorConstants.iconColor),
+                              enabledBorder: UnderlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: ColorConstants.white)),
                               hintText: Constants.emailText,
-                              hintStyle: const TextStyle(
-                                  color: Colors.white, fontSize: 17),
+                              hintStyle: TextStyle(
+                                  color: ColorConstants.white, fontSize: 17),
                             ),
                           ),
                           TextFormField(
                             controller: phoneNumber,
-                            style: const TextStyle(color: Colors.white),
-                            cursorColor: Colors.white,
+                            style: TextStyle(color: ColorConstants.white),
+                            cursorColor: ColorConstants.white,
                             textAlignVertical: TextAlignVertical.top,
                             validator: (value) {
                               if (phoneNumber.text.isEmpty) {
@@ -71,21 +74,22 @@ class SignUpBottomSheet {
                               return null;
                             },
                             decoration: InputDecoration(
-                              icon: const Icon(
+                              icon: Icon(
                                 Icons.phone,
-                                color: Color.fromARGB(255, 210, 206, 206),
+                                color: ColorConstants.iconColor,
                               ),
-                              enabledBorder: const UnderlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white)),
+                              enabledBorder: UnderlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: ColorConstants.white)),
                               hintText: Constants.phoneNumText,
-                              hintStyle: const TextStyle(
-                                  color: Colors.white, fontSize: 17),
+                              hintStyle: TextStyle(
+                                  color: ColorConstants.white, fontSize: 17),
                             ),
                           ),
                           TextFormField(
                             controller: userName,
-                            style: const TextStyle(color: Colors.white),
-                            cursorColor: Colors.white,
+                            style: TextStyle(color: ColorConstants.white),
+                            cursorColor: ColorConstants.white,
                             textAlignVertical: TextAlignVertical.top,
                             validator: (value) {
                               if (userName.text.isEmpty) {
@@ -94,21 +98,22 @@ class SignUpBottomSheet {
                               return null;
                             },
                             decoration: InputDecoration(
-                              icon: const Icon(
+                              icon: Icon(
                                 Icons.perm_identity,
-                                color: Color.fromARGB(255, 210, 206, 206),
+                                color: ColorConstants.iconColor,
                               ),
-                              enabledBorder: const UnderlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white)),
+                              enabledBorder: UnderlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: ColorConstants.white)),
                               hintText: Constants.userNameText,
-                              hintStyle: const TextStyle(
-                                  color: Colors.white, fontSize: 17),
+                              hintStyle: TextStyle(
+                                  color: ColorConstants.white, fontSize: 17),
                             ),
                           ),
                           TextFormField(
                             controller: password,
-                            style: const TextStyle(color: Colors.white),
-                            cursorColor: Colors.white,
+                            style: TextStyle(color: ColorConstants.white),
+                            cursorColor: ColorConstants.white,
                             textAlignVertical: TextAlignVertical.top,
                             validator: (value) {
                               if (password.text.isEmpty) {
@@ -117,15 +122,16 @@ class SignUpBottomSheet {
                               return null;
                             },
                             decoration: InputDecoration(
-                              icon: const Icon(
+                              icon: Icon(
                                 Icons.key,
-                                color: Color.fromARGB(255, 210, 206, 206),
+                                color: ColorConstants.iconColor,
                               ),
-                              enabledBorder: const UnderlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white)),
+                              enabledBorder: UnderlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: ColorConstants.white)),
                               hintText: Constants.passText,
-                              hintStyle: const TextStyle(
-                                  color: Colors.white, fontSize: 17),
+                              hintStyle: TextStyle(
+                                  color: ColorConstants.white, fontSize: 17),
                             ),
                           ),
                           Container(
@@ -143,8 +149,7 @@ class SignUpBottomSheet {
                                       return;
                                     }),
                                     style: ElevatedButton.styleFrom(
-                                        primary: const Color.fromARGB(
-                                            255, 96, 222, 100)),
+                                        primary: ColorConstants.saveChangesButtonColor),
                                     child: Text(
                                       Constants.signUpText,
                                       style: const TextStyle(fontSize: 18),
@@ -155,7 +160,7 @@ class SignUpBottomSheet {
                             children: [
                               Text(
                                 Constants.haveAccountQuestionText,
-                                style: const TextStyle(color: Colors.white),
+                                style: TextStyle(color: ColorConstants.white),
                               ),
                               TextButton(
                                   onPressed: (() {
@@ -163,9 +168,9 @@ class SignUpBottomSheet {
                                   }),
                                   child: Text(
                                     Constants.signInText,
-                                    style: const TextStyle(
-                                        color:
-                                            Color.fromARGB(255, 96, 222, 100)),
+                                    style: TextStyle(
+                                        color: ColorConstants
+                                            .saveChangesButtonColor),
                                   ))
                             ],
                           )

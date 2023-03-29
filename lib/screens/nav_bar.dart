@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:my_blog/constants/color_constants.dart';
 import 'package:my_blog/constants/text_constants.dart';
 import 'package:my_blog/screens/login_screen.dart';
 import 'package:my_blog/screens/profile_page_screen.dart';
@@ -26,14 +27,16 @@ class NavBar extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       "Aslı",
-                      style: TextStyle(color: Colors.black, fontSize: 20),
+                      style:
+                          TextStyle(color: ColorConstants.black, fontSize: 20),
                       textAlign: TextAlign.left,
                     ),
                     Text("aslihancan@gmail.com",
-                        style: TextStyle(color: Colors.grey, fontSize: 15))
+                        style:
+                            TextStyle(color: ColorConstants.grey, fontSize: 15))
                   ],
                 )
               ],

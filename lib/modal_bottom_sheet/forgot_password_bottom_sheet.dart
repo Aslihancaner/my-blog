@@ -48,21 +48,22 @@ class ForgotPasswordBottomSheet {
                             return null;
                           },
                           decoration: InputDecoration(
-                            icon: const Icon(Icons.person,
-                                color: Color.fromARGB(255, 210, 206, 206)),
-                            enabledBorder: const UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.white)),
+                            icon: Icon(Icons.person,
+                                color: ColorConstants.iconColor),
+                            enabledBorder: UnderlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: ColorConstants.white)),
                             hintText: Constants.emailText,
-                            hintStyle: const TextStyle(
-                                color: Colors.white, fontSize: 17),
+                            hintStyle: TextStyle(
+                                color: ColorConstants.white, fontSize: 17),
                           ),
                         ),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.03),
                         TextFormField(
                           controller: password,
-                          style: const TextStyle(color: Colors.white),
-                          cursorColor: Colors.white,
+                          style: TextStyle(color: ColorConstants.white),
+                          cursorColor: ColorConstants.white,
                           textAlignVertical: TextAlignVertical.top,
                           validator: (value) {
                             if (password.text.isEmpty) {
@@ -71,23 +72,24 @@ class ForgotPasswordBottomSheet {
                             return null;
                           },
                           decoration: InputDecoration(
-                            icon: const Icon(
+                            icon: Icon(
                               Icons.key,
-                              color: Color.fromARGB(255, 210, 206, 206),
+                              color: ColorConstants.iconColor,
                             ),
-                            enabledBorder: const UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.white)),
+                            enabledBorder: UnderlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: ColorConstants.white)),
                             hintText: Constants.passText,
-                            hintStyle: const TextStyle(
-                                color: Colors.white, fontSize: 17),
+                            hintStyle: TextStyle(
+                                color: ColorConstants.white, fontSize: 17),
                           ),
                         ),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.03),
                         TextFormField(
                           controller: rePassword,
-                          style: const TextStyle(color: Colors.white),
-                          cursorColor: Colors.white,
+                          style: TextStyle(color: ColorConstants.white),
+                          cursorColor: ColorConstants.white,
                           textAlignVertical: TextAlignVertical.top,
                           validator: (value) {
                             if (rePassword.text.isEmpty) {
@@ -98,15 +100,16 @@ class ForgotPasswordBottomSheet {
                             return null;
                           },
                           decoration: InputDecoration(
-                            icon: const Icon(
+                            icon: Icon(
                               Icons.lock,
-                              color: Color.fromARGB(255, 210, 206, 206),
+                              color: ColorConstants.iconColor,
                             ),
-                            enabledBorder: const UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.white)),
+                            enabledBorder: UnderlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: ColorConstants.white)),
                             hintText: Constants.rePassText,
-                            hintStyle: const TextStyle(
-                                color: Colors.white, fontSize: 17),
+                            hintStyle: TextStyle(
+                                color: ColorConstants.white, fontSize: 17),
                           ),
                         ),
                         Container(
@@ -124,8 +127,8 @@ class ForgotPasswordBottomSheet {
                                     return;
                                   }),
                                   style: ElevatedButton.styleFrom(
-                                      primary: const Color.fromARGB(
-                                          255, 96, 222, 100)),
+                                      primary: ColorConstants
+                                          .saveChangesButtonColor),
                                   child: Text(
                                     Constants.changePassText,
                                     style: const TextStyle(fontSize: 18),

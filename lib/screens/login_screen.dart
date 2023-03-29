@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:my_blog/constants/color_constants.dart';
 import 'package:my_blog/constants/text_constants.dart';
 import 'package:my_blog/modal_bottom_sheet/sign_in_bottom_sheet.dart';
 
@@ -47,14 +48,14 @@ class _MyLoginScreenState extends State<LoginScreen> {
                           children: <Widget>[
                             Positioned.fill(
                               child: Container(
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   // borderRadius: const BorderRadius.all(
                                   //     Radius.circular(20)),
                                   gradient: LinearGradient(
                                     colors: <Color>[
-                                      Color.fromARGB(255, 63, 62, 62),
-                                      Color.fromARGB(255, 58, 57, 57),
-                                      Color.fromARGB(255, 36, 36, 36),
+                                      ColorConstants.signGradient1,
+                                      ColorConstants.signGradient2,
+                                      ColorConstants.signGradient3,
                                     ],
                                   ),
                                 ),
@@ -75,7 +76,7 @@ class _MyLoginScreenState extends State<LoginScreen> {
                                 },
                                 child: Text(Constants.signText,
                                     style:
-                                        const TextStyle(color: Colors.white)),
+                                        TextStyle(color: ColorConstants.white)),
                               ),
                             ),
                           ],
@@ -88,14 +89,14 @@ class _MyLoginScreenState extends State<LoginScreen> {
                           children: <Widget>[
                             Positioned.fill(
                               child: Container(
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   // borderRadius: const BorderRadius.all(
                                   //     Radius.circular(20)),
                                   gradient: LinearGradient(
                                     colors: <Color>[
-                                      Color(0xFF42A5F5),
-                                      Color(0xFF1976D2),
-                                      Color(0xFF0D47A1),
+                                      ColorConstants.signFbGradient1,
+                                      ColorConstants.signFbGradient2,
+                                      ColorConstants.signFbGradient3,
                                     ],
                                   ),
                                 ),
@@ -113,8 +114,8 @@ class _MyLoginScreenState extends State<LoginScreen> {
                                 onPressed: () {
                                   showModalBottomSheet(
                                     context: context,
-                                    backgroundColor:
-                                        const Color.fromARGB(255, 69, 69, 69),
+                                    backgroundColor: ColorConstants
+                                        .bottomSheetBackgroundColor,
                                     shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
                                             topLeft: Radius.circular(20),
@@ -145,7 +146,7 @@ class _MyLoginScreenState extends State<LoginScreen> {
                                 },
                                 child: Text(Constants.signInFacebookText,
                                     style:
-                                        const TextStyle(color: Colors.white)),
+                                        TextStyle(color: ColorConstants.white)),
                               ),
                             ),
                           ],
@@ -164,7 +165,7 @@ class _MyLoginScreenState extends State<LoginScreen> {
           });
 
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              backgroundColor: Colors.grey.withOpacity(0.7),
+              backgroundColor: ColorConstants.grey.withOpacity(0.7),
               content: SizedBox(
                 height: size.height * 0.02,
                 child: Center(

@@ -6,6 +6,8 @@ import 'package:my_blog/constants/text_constants.dart';
 import 'package:my_blog/screens/nav_bar.dart';
 import 'package:my_blog/screens/top_bar.dart';
 
+import '../constants/color_constants.dart';
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
@@ -30,7 +32,7 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar:  const TopBar(isSearchButton: false),
       drawer: NavBar(),
       body: Container(
-        color: Colors.white,
+        color: ColorConstants.white,
         child: Padding(
             padding: EdgeInsets.only(
                 bottom: (MediaQuery.of(context).viewInsets.bottom) *
@@ -54,15 +56,15 @@ class _ProfilePageState extends State<ProfilePage> {
                   padding: const EdgeInsets.all(16.0),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.email),
-                      prefixIconColor: Color.fromARGB(255, 210, 206, 206),
+                      prefixIcon:  const Icon(Icons.email),
+                      prefixIconColor: ColorConstants.iconColor,
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey)),
+                      enabledBorder:  UnderlineInputBorder(
+                          borderSide: BorderSide(color: ColorConstants.grey)),
                       hintText: Constants.emailText,
                       hintStyle:
-                          const TextStyle(color: Colors.grey, fontSize: 17),
+                           TextStyle(color: ColorConstants.grey, fontSize: 17),
                     ),
                   ),
                 ),
@@ -71,14 +73,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.phone),
-                      prefixIconColor: Color.fromARGB(255, 210, 206, 206),
+                      prefixIconColor: ColorConstants.iconColor,
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey)),
+                      enabledBorder:  UnderlineInputBorder(
+                          borderSide: BorderSide(color: ColorConstants.grey)),
                       hintText: Constants.phoneNumText,
                       hintStyle:
-                          const TextStyle(color: Colors.grey, fontSize: 17),
+                           TextStyle(color: ColorConstants.grey, fontSize: 17),
                     ),
                   ),
                 ),
@@ -87,14 +89,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.key),
-                      prefixIconColor: const Color.fromARGB(255, 210, 206, 206),
+                      prefixIconColor:  ColorConstants.iconColor,
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey)),
+                      enabledBorder:  UnderlineInputBorder(
+                          borderSide: BorderSide(color: ColorConstants.grey)),
                       hintText: Constants.newPassText,
                       hintStyle:
-                          const TextStyle(color: Colors.grey, fontSize: 17),
+                           TextStyle(color: ColorConstants.grey, fontSize: 17),
                     ),
                   ),
                 ),
@@ -103,14 +105,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.key),
-                      prefixIconColor: const Color.fromARGB(255, 210, 206, 206),
+                      prefixIconColor:  ColorConstants.iconColor,
                       // icon: Icon(Icons.email,
                       //     color: Color.fromARGB(255, 210, 206, 206)),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey)),
+                      enabledBorder:  UnderlineInputBorder(
+                          borderSide: BorderSide(color: ColorConstants.grey)),
                       hintText: Constants.rePassText,
                       hintStyle:
-                          const TextStyle(color: Colors.grey, fontSize: 17),
+                           TextStyle(color: ColorConstants.grey, fontSize: 17),
                     ),
                   ),
                 ),
@@ -128,7 +130,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             }),
                             style: ElevatedButton.styleFrom(
                                 primary:
-                                    const Color.fromARGB(255, 96, 222, 100)),
+                                    ColorConstants.saveChangesButtonColor),
                             child: Text(
                               Constants.saveChangesText,
                               style: const TextStyle(fontSize: 18),
@@ -167,7 +169,7 @@ class _ProfilePageState extends State<ProfilePage> {
             //               // icon: Icon(Icons.email,
             //               //     color: Color.fromARGB(255, 210, 206, 206)),
             //               enabledBorder: UnderlineInputBorder(
-            //                   borderSide: BorderSide(color: Colors.grey)),
+            //                   borderSide: BorderSide(color: ColorConstants.grey)),
             //               hintText: "Email",
             //               hintStyle: TextStyle(color: Colors.white, fontSize: 17),
             //             ),
@@ -182,7 +184,7 @@ class _ProfilePageState extends State<ProfilePage> {
             //               // icon: Icon(Icons.email,
             //               //     color: Color.fromARGB(255, 210, 206, 206)),
             //               enabledBorder: UnderlineInputBorder(
-            //                   borderSide: BorderSide(color: Colors.grey)),
+            //                   borderSide: BorderSide(color: ColorConstants.grey)),
             //               hintText: "Email",
             //               hintStyle: TextStyle(color: Colors.white, fontSize: 17),
             //             ),
@@ -197,7 +199,7 @@ class _ProfilePageState extends State<ProfilePage> {
             //               // icon: Icon(Icons.email,
             //               //     color: Color.fromARGB(255, 210, 206, 206)),
             //               enabledBorder: UnderlineInputBorder(
-            //                   borderSide: BorderSide(color: Colors.grey)),
+            //                   borderSide: BorderSide(color: ColorConstants.grey)),
             //               hintText: "Email",
             //               hintStyle: TextStyle(color: Colors.white, fontSize: 17),
             //             ),
@@ -212,7 +214,7 @@ class _ProfilePageState extends State<ProfilePage> {
             //               // icon: Icon(Icons.email,
             //               //     color: Color.fromARGB(255, 210, 206, 206)),
             //               enabledBorder: UnderlineInputBorder(
-            //                   borderSide: BorderSide(color: Colors.grey)),
+            //                   borderSide: BorderSide(color: ColorConstants.grey)),
             //               hintText: "Email",
             //               hintStyle: TextStyle(color: Colors.white, fontSize: 17),
             //             ),

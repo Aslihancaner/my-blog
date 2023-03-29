@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_blog/constants/color_constants.dart';
 import 'package:my_blog/screens/nav_bar.dart';
 import 'package:my_blog/screens/top_bar.dart';
 import 'package:my_blog/widgets/home_page_post_container_widget.dart';
@@ -34,22 +35,22 @@ class _HomePageState extends State<HomePage> {
       drawer: NavBar(),
       body: ListView(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 20.0, top: 8.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, top: 8.0),
             child: Text(
               "Your Daily",
               style: TextStyle(
-                  color: Colors.grey,
+                  color: ColorConstants.grey,
                   fontSize: 30,
                   fontWeight: FontWeight.w400),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20.0, top: 8.0, bottom: 8.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, top: 8.0, bottom: 8.0),
             child: Text(
               "Recommendation",
               style: TextStyle(
-                  color: Colors.black,
+                  color: ColorConstants.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 30),
             ),
@@ -67,19 +68,18 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           DefaultTabController(
-              
               length: 7, // length of tabs
               initialIndex: 0,
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     Container(
-                      child: const TabBar(                     
-                        indicatorColor: Colors.transparent,
+                      child:  TabBar(
+                        indicatorColor: ColorConstants.transparent,
                         isScrollable: true,
-                        labelColor: Colors.black,
-                        unselectedLabelColor: Colors.grey,
-                        tabs: [
+                        labelColor: ColorConstants.black,
+                        unselectedLabelColor: ColorConstants.grey,
+                        tabs: const [
                           Tab(text: 'Top'),
                           Tab(text: 'Popular'),
                           Tab(text: 'Trending'),

@@ -1,30 +1,33 @@
 import 'package:my_blog/models/horizontal_post_model.dart';
-import 'package:my_blog/widgets/horizontal_post_container_widget.dart';
 
+//adını homepagemodel yap
+//categories+ yerine üst için slider ekle
 class SlidersModel {
-  late List<Categories> categories;
+  List<Categories>? categories;
 
   SlidersModel({required this.categories});
 
 //burası hatalı olabilir. sor
 
- SlidersModel.fromJson(Map<String, dynamic> json) {
-  assert(json['categories'] != null, 'Categories cannot be null in SlidersModel.');
-  categories = <Categories>[];
-  json['categories'].forEach((v) {
-    categories.add(new Categories.fromJson(v));
-  });
-}
+  SlidersModel.fromJson(Map<String, dynamic> json) {
+    // assert(json['categories'] != null, 'Categories cannot be null in SlidersModel.');
+    if (json['categories'] != null) {
+      categories = <Categories>[];
+
+      json['categories'].forEach((v) {
+        categories!.add(Categories.fromJson(v));
+      });
+    }
+  }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (categories != null) {
-      data['categories'] = categories.map((v) => v.toJson()).toList();
-    }
+    data['categories'] = categories!.map((v) => v.toJson()).toList();
     return data;
   }
 }
 
+//id ve name bos olamaz, ama if'te hata veriyor sor
 class Categories {
   int? id;
   String? name;
@@ -53,4 +56,3 @@ class Categories {
     return data;
   }
 }
-

@@ -1,11 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/route_manager.dart';
 import 'package:my_blog/constants/color_constants.dart';
 import 'package:my_blog/constants/text_constants.dart';
+import 'package:my_blog/main.dart';
 import 'package:my_blog/screens/login_screen.dart';
 import 'package:my_blog/screens/profile_page_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class NavBar extends StatelessWidget {
+class NavBar extends StatefulWidget {
+  @override
+  State<NavBar> createState() => _NavBarState();
+}
+
+class _NavBarState extends State<NavBar> {
+  @override
+  void initState() {
+    super.initState();
+    _loadDarkModePrefence();
+  }
+
+  void _loadDarkModePrefence() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool _isDarkModeEnabled = prefs.getBool('isDarkModeEnabled') ?? false;
+    setState(() {
+      isDarkModeEnabled = _isDarkModeEnabled;
+    });
+    isDarkModeEnabled = _isDarkModeEnabled;
+  }
+
+  void _toggleDarkMode(bool value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setBool('isDarkModeEnabled', value);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -66,7 +94,23 @@ class NavBar extends StatelessWidget {
             leading: const Icon(Icons.dark_mode),
             title: Text(Constants.darkModeText),
             // ignore: avoid_returning_null_for_void
-            onTap: () => null,
+            trailing: Switch(
+              value: isDarkModeEnabled,
+              onChanged: (value) async {
+                setState(() {
+                  isDarkModeEnabled = value;
+                });
+                SharedPreferences preferences =
+                    await SharedPreferences.getInstance();
+                await preferences.setBool(
+                    "isDarkModeEnabled", isDarkModeEnabled);
+                Get.changeTheme(ThemeData(
+                  brightness:
+                      isDarkModeEnabled ? Brightness.dark : Brightness.light,
+                  // diğer tema ayarları
+                ));
+              },
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.notifications_active),

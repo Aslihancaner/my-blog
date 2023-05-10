@@ -2,6 +2,7 @@ class ProfilePageModel {
   int userId;
   String email;
   String? phoneNumber;
+  //name ekle
 
   ProfilePageModel({
     required this.userId,

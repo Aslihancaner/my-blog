@@ -37,6 +37,7 @@ dependencies:
   modal_bottom_sheet: ^2.1.2
   email_validator: ^2.1.17
   get: ^4.6.5
+  shared_preferences: ^2.1.0
 
 dev_dependencies:
   flutter_test:

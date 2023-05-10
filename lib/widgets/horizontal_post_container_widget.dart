@@ -27,7 +27,7 @@ class HorizontalPostContainer extends StatelessWidget {
         width: size.width * 0.9,
         margin: const EdgeInsets.symmetric(vertical: 20.0),
         decoration: BoxDecoration(
-            color: ColorConstants.white,
+           // color: ColorConstants.white,
             borderRadius: BorderRadius.circular(25.0),
             boxShadow: [
               BoxShadow(

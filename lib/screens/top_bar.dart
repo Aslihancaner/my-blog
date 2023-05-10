@@ -23,7 +23,8 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
           },
         );
       }),
-      backgroundColor: ColorConstants.white,
+     // backgroundColor: Theme.of(context).primaryColor,
+     backgroundColor: Colors.white,
       shadowColor: ColorConstants.transparent,
       // title: const Text(
       //   "MyBlog",

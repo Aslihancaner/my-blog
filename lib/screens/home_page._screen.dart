@@ -62,7 +62,10 @@ class _HomePageState extends State<HomePage> {
               children: const [
                 HomePagePostContainer(image: AssetImage("assets/deneme.jpg")),
                 HomePagePostContainer(
-                  image: AssetImage("assets/foto.jpeg"),
+                  image: AssetImage("assets/manzara.jpg"),
+                ),
+                HomePagePostContainer(
+                  image: AssetImage("assets/images.jpg"),
                 ),
               ],
             ),
@@ -74,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     Container(
-                      child:  TabBar(
+                      child: TabBar(
                         indicatorColor: ColorConstants.transparent,
                         isScrollable: true,
                         labelColor: ColorConstants.black,

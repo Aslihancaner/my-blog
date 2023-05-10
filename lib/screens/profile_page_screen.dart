@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
 import 'package:my_blog/constants/text_constants.dart';
 import 'package:my_blog/screens/nav_bar.dart';
 import 'package:my_blog/screens/top_bar.dart';
@@ -32,7 +31,7 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar:  const TopBar(isSearchButton: false),
       drawer: NavBar(),
       body: Container(
-        color: ColorConstants.white,
+        //color: ColorConstants.white,
         child: Padding(
             padding: EdgeInsets.only(
                 bottom: (MediaQuery.of(context).viewInsets.bottom) *
